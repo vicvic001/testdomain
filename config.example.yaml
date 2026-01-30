@@ -1,0 +1,32 @@
+app:
+  start_year: 2009
+  end_year: 2016
+  poll_interval_seconds: 3600
+  max_pages_per_topic: 8
+  user_agent: "BitcointalkDomainHunter/1.0 (+https://example.com/contact)"
+
+bitcointalk:
+  base_url: "https://bitcointalk.org/index.php"
+  topic_urls:
+    - "https://bitcointalk.org/index.php?topic=5.0"
+  board_ids:
+    - 1
+  board_start_page: 0
+  board_end_page: 2
+
+storage:
+  sqlite_path: "domain_hunter.db"
+
+notifications:
+  email:
+    enabled: false
+    smtp_host: "smtp.example.com"
+    smtp_port: 587
+    smtp_user: "you@example.com"
+    smtp_password: "your-password"
+    from_address: "you@example.com"
+    to_addresses:
+      - "you@example.com"
+  webhook:
+    enabled: false
+    url: "https://hooks.example.com/notify"
